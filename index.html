@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="https://nagoshiashumari.github.io/Rpg-Awesome/stylesheets/rpg-awesome.min.css">
+  <script src="https://kit.fontawesome.com/79e2466ad0.js" crossorigin="anonymous"
+    integrity="sha384-tCIa9x35rFwAnPYwDCoqImEiB9Ai31jfzeslK4Q53KZAXSFi24Px912eIpefo9Bj"></script>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" href="style.css">
+  <title>Moon Miner</title>
+</head>
+
+<body class="container-fluid bg" onload="autoMiner()">
+  <div class="row justify-content-center">
+    <h1 class="col-12 text-center header-font"> MOON MINER </h1>
+  </div>
+  <div class="row justify-content-end">
+    <div class="col-4">
+      <div class="row justify-content-center small-font inv-padding"> STATS </div>
+      <div class="stat-card card-text">
+        <div id="cps" class="row"> CPS (cheese per second): 0 </div>
+        <div id="tcm" class="row"> TCM (Total Cheese Multiplier): 1 </div>
+      </div>
+    </div>
+    <div class="col-4 text-center">
+      <img class="moon" onclick="mine()" src="moon.png" alt="the moon" title="get that cheddahhhh" />
+    </div>
+    <div class="col-4 text-center align-items-center">
+      <div class="row justify-content-center small-font inv-padding"> INVENTORY </div>
+      <div class="css-card card-text">
+        <div class="row justify-content-center">
+          <div class="col-12">
+            <div id="cheeseCount"> cheese: 0 </div>
+          </div>
+        </div>
+        <div class="row justify-content-center">
+          <div class="col-12">
+            <div id="cheeseKnifeCount"> cheese knives: 0 </div>
+          </div>
+        </div>
+        <div class="row justify-content-center">
+          <div class="col-12">
+            <div id="cheeseCartCount"> cheese carts: 0 </div>
+          </div>
+        </div>
+        <div class="row justify-content-center">
+          <div class="col-12">
+            <div id="moustronautCount"> moustronauts: 0 </div>
+          </div>
+        </div>
+        <div class="row justify-content-center">
+          <div class="col-12 mb-1">
+            <div id="graterCount"> graters: 0 </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row justify-content-between">
+    <div class="col-6 text-center text">
+      <div class="row justify-content-center text-center">
+        <div class="small-font store-margin"> STORE </div>
+      </div>
+      <div class="css-card mb-2 mt-1">
+        <div class="row justify-content-center align-items-center mb-2">
+          <div class="col-6 mb-1 mt-1">
+            <div class="row justify-content-center">
+              <div class="col-12">
+                <h5>Click Upgrades</h5>
+              </div>
+              <button id="buyCheeseKnife" class="col-4 button" title="buy a cheese knife!" onclick="buyCheeseKnife()"
+                disabled>+1 <i class="ra ra-knife ra-lg"></i></button>
+              <div id="cheeseKnifePrice" class="col-5 text-left moustronautStyle"> = -50</div>
+            </div>
+          </div>
+          <div class="col-6 mb-1 mt-1">
+            <div class="row justify-content-center">
+              <div class="col-12">
+                <h5>Auto Upgrades</h5>
+              </div>
+              <button id="buyCheeseCart" class="col-4 button" title="buy a cheesecart!" onclick="buyCheeseCart()"
+                disabled>+4 <i class="ra ra-mine-wagon ra-lg"></i></button>
+              <div id="cheeseCartPrice" class="col-5 text-left"> = -250</div>
+            </div>
+          </div>
+        </div>
+        <div class="row justify-content-center align-items-center mb-3">
+          <div class="col-6 mb-1 mt-1">
+            <div class="row justify-content-center">
+              <button id="buyMoustronaut" class="col-4 button" title="buy a moustronaut!" onclick="buyMoustronaut()"
+                disabled>+16 <i class="fas fa-user-astronaut"></i></button>
+              <div id="moustronautPrice" class="col-5 text-left moustronautStyle"> = -500</div>
+            </div>
+          </div>
+          <div class="col-6 mb-1 mt-1">
+            <div class="row justify-content-center">
+              <button id="buyGrater" class="col-4 button" title="buy a cheese grater!" onclick="buyGrater()"
+                disabled>+256 <i class="fas fa-greater-than"></i></button>
+              <div id="graterPrice" class="col-5 text-left"> = -10000</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
+<script src="app.js"></script>
+
+</html>
